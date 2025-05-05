@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
-
-import logo from "./assets/images/logo_dragonball.png"
+import { Menu } from "@/components/menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,18 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className="fixed top-0 w-full h-16 bg-orange-500 flex items-center justify-end px-8 gap-6 shadow-md z-50 font-serif">
-          <Image src={logo} alt="logo" className="w-12 h-10"></Image>
-          <p className="text-gray-500 hover:text-gray-400 transition-colors cursor-pointer">
-            Início
-          </p>
-          <p className="text-gray-500 hover:text-gray-400 transition-colors cursor-pointer">
-            Sobre
-          </p>
-          <p className="text-gray-500 hover:text-gray-400 transition-colors cursor-pointer">
-            Características
-          </p>
-        </nav>
+        <Menu op1="Home" op2="HookPage" op3="axios"/>
         {children}
       </body>
     </html>
