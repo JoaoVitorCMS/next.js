@@ -14,6 +14,7 @@ export const Menu = ({op1, op2, op3, op4} : MenuProps ) => {
                 <Link className="font-black" href={"/"}>{op1}</Link>
                 <Link className="font-black" href={"/hookPage"}>{op2}</Link>
                 <Link className="font-black" href={"/axiosPage"}>{op3}</Link>
+                <Link className="font-black" href={"/serverSide"}>{op4}</Link>
             </nav>
         </header>
     )
